@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\App.xaml
-11151548125
+22037783069
 
-92025571061
+10-240602930
 210663246009
-MainWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -48,3 +48,5 @@ C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\bin\Debug\netcoreapp3.0\M
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\bin\Debug\netcoreapp3.0\MertKaymaz-301Project.dll
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\bin\Debug\netcoreapp3.0\MertKaymaz-301Project.pdb
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\MertKaymaz-301Project.dll
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\LoginWindow.g.cs
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\LoginWindow.baml
