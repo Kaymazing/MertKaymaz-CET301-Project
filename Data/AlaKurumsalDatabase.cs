@@ -11,7 +11,9 @@ namespace MertKaymaz_301Project.Data
         string connectionString = @"Server=.\sqlexpress;Database=AlaKurumsalDatabase;Trusted_Connection=True;";
         public DbSet<Owner> Owners{ get; set; }
         public DbSet<Vehicle> Vehicles{ get; set; }
-
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Payment> Payments { get; set; }
         public AlaKurumsalDatabase() : base()
         {
 
