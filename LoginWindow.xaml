@@ -24,6 +24,6 @@
         <TextBlock Text="Şifre :" Grid.Column="0" Grid.Row="2" FontFamily="Montserrat" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0"></TextBlock>
         <TextBox x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="10,18,20,18" BorderBrush="#FF0C364C"/>
         <PasswordBox Margin="10,18,20,18" x:Name="txtPassword" Grid.Row="2" Grid.Column="1" PasswordChar="*" RenderTransformOrigin="0.514,0.484" BorderBrush="#FF0C3B54" />
-        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="154" Margin="0,19,0,19" HorizontalAlignment="Center" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" Background="#FF7EE791" BorderBrush="#FF092F43" BorderThickness="1"/>
+        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="154" Margin="0,19,0,19" HorizontalAlignment="Center" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" Background="#FF7EE791" BorderBrush="#FF092F43" BorderThickness="1" Click="btnLogin_Click"/>
     </Grid>
 </Window>

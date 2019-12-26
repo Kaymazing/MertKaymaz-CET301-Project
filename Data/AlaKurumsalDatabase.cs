@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using MertKaymaz_301Project.Data;
+using MertKaymaz_301Project.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace MertKaymaz_301Project.Data
@@ -22,6 +23,43 @@ namespace MertKaymaz_301Project.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+
+
+            modelBuilder.Entity<Owner>().HasData(
+              new Owner
+              {
+                  Id = 1,
+                  Name = "Ozkan",
+                  Surname = "Kaymaz",
+                  Age = 40,
+                  PhoneNo = "532273",
+                  Mail = "ozkan.kaymaz@alakurumsal.com",
+                  Password = new Service.AlaService().hashPassword("ozkan123"),
+
+                  //Password = new Service.CetUserService().hashPassword("admin"),
+
+              }
+          ) ;
+            modelBuilder.Entity<Owner>().HasData(
+              new Owner
+              {
+                  Id = 2,
+                  Name = "Kenan",
+                  Surname = "İlten",
+                  Age = 36,
+                  PhoneNo = "532631",
+                  Mail = "kenan.ilten@alakurumsal.com",
+                  Password = new Service.AlaService().hashPassword("kenan123"),
+
+                  //Password = new Service.CetUserService().hashPassword("admin"),
+
+              }
+          );
+
         }
     }
 

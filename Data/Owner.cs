@@ -13,5 +13,6 @@ namespace MertKaymaz_301Project.Data
         public string PhoneNo { get; set; }
 
         public string Mail { get; set; }
+        public string Password { get; set; }
     }
 }

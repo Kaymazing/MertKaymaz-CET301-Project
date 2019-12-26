@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MertKaymaz_301Project.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace MertKaymaz_301Project
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private Owner loginUser;
+        public MainWindow(Owner owner)
         {
+            loginUser = owner;
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
