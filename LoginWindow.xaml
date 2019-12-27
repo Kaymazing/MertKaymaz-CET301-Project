@@ -5,25 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="Giriş Ekranı" Height="300" Width="400" ResizeMode="NoResize">
-    <Grid Background="#FF90B5C8">
+        Title="Giriş Ekranı" Height="248" Width="364" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\bluecar2.png" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="148"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="71*"></RowDefinition>
-            <RowDefinition Height="50*"></RowDefinition>
-            <RowDefinition Height="50*"></RowDefinition>
-            <RowDefinition Height="50*"></RowDefinition>
+            <RowDefinition Height="82*"></RowDefinition>
+            <RowDefinition Height="43*"></RowDefinition>
+            <RowDefinition Height="43*"></RowDefinition>
+            <RowDefinition Height="36*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Source="/source/placeholder2.png" RenderTransformOrigin="0.494,0.479" Stretch="Fill" Margin="0,1,0,0" Panel.ZIndex="11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <TextBlock Text="Kullanıcı Adı :" Grid.Column="0" Grid.Row="1" FontFamily="Montserrat" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0"></TextBlock>
-        <TextBlock Text="Şifre :" Grid.Column="0" Grid.Row="2" FontFamily="Montserrat" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0"></TextBlock>
-        <TextBox x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="10,18,20,18" BorderBrush="#FF0C364C"/>
-        <PasswordBox Margin="10,18,20,18" x:Name="txtPassword" Grid.Row="2" Grid.Column="1" PasswordChar="*" RenderTransformOrigin="0.514,0.484" BorderBrush="#FF0C3B54" />
-        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="154" Margin="0,19,0,19" HorizontalAlignment="Center" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" Background="#FF7EE791" BorderBrush="#FF092F43" BorderThickness="1" Click="btnLogin_Click"/>
+        <Image Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Source="source/placeholder2.png" RenderTransformOrigin="0.494,0.479" Stretch="Fill" Margin="0,1,0,0" Panel.ZIndex="11" />
+        <TextBlock Text="Kullanıcı Adı :" Grid.Column="0" Grid.Row="1" FontFamily="Montserrat" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,13,0,0" Height="19" Width="114" FontStyle="Normal" Foreground="#FF0A3044">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock Text="Şifre :" Grid.Column="0" Grid.Row="2" FontFamily="Montserrat" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0" Height="20" Width="48" Foreground="#FF0B374C">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBox x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="18,10,40,10" BorderBrush="#FF0C364C" Opacity="0.6"/>
+        <PasswordBox Margin="18,10,40,9" x:Name="txtPassword" Grid.Row="2" Grid.Column="1" PasswordChar="*" RenderTransformOrigin="0.514,0.484" BorderBrush="#FF0C3B54" Opacity="0.6" />
+        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="100" Margin="47,2,0,10" HorizontalAlignment="Left" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" Background="#FFF68C59" BorderBrush="#FF092F43" BorderThickness="1" Click="btnLogin_Click"/>
     </Grid>
 </Window>
