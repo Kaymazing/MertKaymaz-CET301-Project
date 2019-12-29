@@ -30,7 +30,37 @@ namespace MertKaymaz_301Project
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            txtLoginUsers.Text = "Hoş geldin " + loginUser.Name + " " + loginUser.Surname + ".";
+        }
 
+            private void MenuItem_Click(object sender, RoutedEventArgs e) //HW5'ten alınmıştır.
+            {
+                if (MessageBox.Show("Uygulamadan Çıkmak İstediğinize Emin misiniz?", "Onay", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+
+            private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+            {
+
+            }
+
+            private void SifreDegistirClick(object sender, RoutedEventArgs e)
+            {
+                PasswordChange passwordChange = new PasswordChange(loginUser);
+                passwordChange.Show();
+            }
+
+
+            private void Araclar_Click(object sender, RoutedEventArgs e)
+            {
+
+            }
+
+            private void Musteriler_Click(object sender, RoutedEventArgs e)
+            {
+
+            }
         }
     }
-}

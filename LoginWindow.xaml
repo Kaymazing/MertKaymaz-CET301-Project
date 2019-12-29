@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="Giriş Ekranı" Height="248" Width="364" ResizeMode="NoResize">
+        Title="ALA KURUMSAL - Giriş Ekranı" Height="248" Width="364" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\bluecar2.png" />
@@ -35,6 +35,7 @@
         </TextBlock>
         <TextBox x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="18,10,40,10" BorderBrush="#FF0C364C" Opacity="0.6"/>
         <PasswordBox Margin="18,10,40,9" x:Name="txtPassword" Grid.Row="2" Grid.Column="1" PasswordChar="*" RenderTransformOrigin="0.514,0.484" BorderBrush="#FF0C3B54" Opacity="0.6" />
-        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="100" Margin="47,2,0,10" HorizontalAlignment="Left" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" Background="#FFF68C59" BorderBrush="#FF092F43" BorderThickness="1" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="100" Margin="47,2,0,10" HorizontalAlignment="Left" FontSize="15" FontFamily="Montserrat" FontWeight="Bold" Grid.Column="1" 
+                Background="#FFF68C59" BorderBrush="#FF092F43" BorderThickness="1" Click="btnLogin_Click" IsDefault="True"/>
     </Grid>
 </Window>

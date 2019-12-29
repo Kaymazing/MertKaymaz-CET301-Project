@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="source\hatchback.png" />
     <None Remove="source\placeholder2.png" />
+    <None Remove="source\seat-belt.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="source\hatchback.png" />
     <Resource Include="source\placeholder2.png" />
+    <Resource Include="source\seat-belt.png" />
   </ItemGroup>
 
 </Project>

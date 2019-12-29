@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="ALA KURUMSAL - Ana Ekran" Height="248" Width="364" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
+        <Menu Grid.Row="0" FontFamily="Calibri" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Background="#FF92B4E7" Opacity="0.75">
+            <MenuItem Header="_Kullanıcı" FontFamily="Montserrat" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Center">
+                <MenuItem Header="Şifre Değiştir" Click="SifreDegistirClick"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Çıkış Yap" Click="MenuItem_Click" FontFamily="Montserrat" FontWeight="Bold">
+            </MenuItem>
 
+        </Menu>
+        <TextBlock Name="txtLoginUsers" Margin="10,32,-10,8" FontSize="16" FontFamily="Montserrat" Panel.ZIndex="-1" Foreground="#FFDC8258"></TextBlock>
+
+        <Button Content="Araçlar" HorizontalAlignment="Center" 
+                Margin="0,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="36" 
+                Width="152" Click="Araclar_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+                FontWeight="Black" FontSize="14" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
+        <Button Content="Müşteriler" HorizontalAlignment="Center" 
+                Margin="0,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="36" 
+                Width="152" Click="Musteriler_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+                FontWeight="Black" BorderBrush="#FF98B5ED" FontSize="14" BorderThickness="1.5"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="108,65,0,0" VerticalAlignment="Top" Width="30" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\hatchback.png"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="108,116,0,0" VerticalAlignment="Top" Width="26" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\seat-belt.png" RenderTransformOrigin="-3.067,0.299"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="210,65,0,0" VerticalAlignment="Top" Width="30" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\hatchback.png"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,116,0,0" VerticalAlignment="Top" Width="24" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\seat-belt.png" RenderTransformOrigin="-3.067,0.299"/>
+        <Button Content="Kiralamalar" HorizontalAlignment="Center" 
+            Margin="0,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="36" 
+            Width="152" Click="Musteriler_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+            FontWeight="Black" BorderBrush="#FF98B5ED" FontSize="14" BorderThickness="1.5"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="105,165,0,0" VerticalAlignment="Top" Width="26" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\price.png" RenderTransformOrigin="-3.067,0.299"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="219,165,0,0" VerticalAlignment="Top" Width="26" 
+               Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\price.png" RenderTransformOrigin="-3.067,0.299"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blue blur.png" Opacity="0.75" />
+        </Grid.Background>
     </Grid>
 </Window>
