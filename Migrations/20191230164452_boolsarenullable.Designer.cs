@@ -4,14 +4,16 @@ using MertKaymaz_301Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MertKaymaz_301Project.Migrations
 {
     [DbContext(typeof(AlaKurumsalDatabase))]
-    partial class AlaKurumsalDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20191230164452_boolsarenullable")]
+    partial class boolsarenullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -210,24 +212,12 @@ namespace MertKaymaz_301Project.Migrations
                     b.Property<string>("Owner")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OwnertId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnertId");
-
                     b.ToTable("Vehicles");
-                });
-
-            modelBuilder.Entity("MertKaymaz_301Project.Data.Vehicle", b =>
-                {
-                    b.HasOne("MertKaymaz_301Project.Data.Owner", "Ownert")
-                        .WithMany()
-                        .HasForeignKey("OwnertId");
                 });
 #pragma warning restore 612, 618
         }

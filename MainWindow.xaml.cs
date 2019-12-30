@@ -55,12 +55,16 @@ namespace MertKaymaz_301Project
 
             private void Araclar_Click(object sender, RoutedEventArgs e)
             {
-
-            }
+            Araclar araclar = new Araclar(loginUser);
+            araclar.Show();
+            this.Close();
+        }
 
             private void Musteriler_Click(object sender, RoutedEventArgs e)
             {
-
-            }
+            Customers customers = new Customers(loginUser);
+            customers.Show();
+            this.Close();
+        }
         }
     }

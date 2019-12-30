@@ -52,3 +52,9 @@ C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\L
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\LoginWindow.baml
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\PasswordChange.g.cs
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\PasswordChange.baml
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\BookingWindow.g.cs
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\CustomersWindow.g.cs
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\VehiclesWindow.g.cs
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\BookingWindow.baml
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\CustomersWindow.baml
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\VehiclesWindow.baml

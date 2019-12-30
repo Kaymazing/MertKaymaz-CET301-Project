@@ -12,9 +12,9 @@ namespace MertKaymaz_301Project.Data
         public int Age { get; set; }
         public string Phone { get; set; }
         public string City { get; set; }
-        public bool HasLicence { get; set; }
+        public bool? HasLicence { get; set; }
         public DateTime LicenceEndDate { get; set; }
-        public bool HasCriminalRecord { get; set; }
+        public bool? HasCriminalRecord { get; set; }
 
 
 

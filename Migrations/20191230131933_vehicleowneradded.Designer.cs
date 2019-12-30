@@ -4,14 +4,16 @@ using MertKaymaz_301Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MertKaymaz_301Project.Migrations
 {
     [DbContext(typeof(AlaKurumsalDatabase))]
-    partial class AlaKurumsalDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20191230131933_vehicleowneradded")]
+    partial class vehicleowneradded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -186,22 +188,22 @@ namespace MertKaymaz_301Project.Migrations
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("IsAvailable")
+                    b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsCrashed")
+                    b.Property<bool>("IsCrashed")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsOnSale")
+                    b.Property<bool>("IsOnSale")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsPreOwned")
+                    b.Property<bool>("IsPreOwned")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsRentable")
+                    b.Property<bool>("IsRentable")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsSold")
+                    b.Property<bool>("IsSold")
                         .HasColumnType("bit");
 
                     b.Property<string>("ModelName")
@@ -210,24 +212,12 @@ namespace MertKaymaz_301Project.Migrations
                     b.Property<string>("Owner")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OwnertId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnertId");
-
                     b.ToTable("Vehicles");
-                });
-
-            modelBuilder.Entity("MertKaymaz_301Project.Data.Vehicle", b =>
-                {
-                    b.HasOne("MertKaymaz_301Project.Data.Owner", "Ownert")
-                        .WithMany()
-                        .HasForeignKey("OwnertId");
                 });
 #pragma warning restore 612, 618
         }

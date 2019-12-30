@@ -1,0 +1,55 @@
+﻿<Window x:Class="MertKaymaz_301Project.Customers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MertKaymaz_301Project"
+        mc:Ignorable="d"
+        Title="ALA KURUMSAL - Müşteriler" Height="450" Width="800" Loaded="CWwindowLoaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blueblue.jpg" />
+        </Grid.Background>
+        <Button Content="Ana Menü" HorizontalAlignment="Left" 
+                Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
+                Width="70" Click="CWAnaMenu" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+                FontWeight="Black" FontSize="11" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
+        <StackPanel Visibility="Collapsed" Name="sparaclar" Margin="0,10,0,380" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.262"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.495"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBlock Height="40"><Run Text="deneme"/></TextBlock>
+        </StackPanel>
+        <DataGrid CanUserAddRows="True" Name="dgCustomers" SelectedCellsChanged="dgCustomers_SelectedCellsChanged_1" Margin="10,75,10,41" Opacity="0.60" />
+
+        <Expander IsExpanded="False" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Left" Height="78" Margin="94,2,0,0" VerticalAlignment="Top" Width="716" ExpandDirection="Right" Cursor="Pen" Visibility="Visible">
+            <Expander.Header >
+                <Border Background="#FFD58C6B" BorderThickness="2" BorderBrush="#FF84AEE8" Height="27">
+                    <TextBlock Foreground="Black" Text="Ekle/Güncelle/Sil" FontWeight="Black" VerticalAlignment="Center" FontSize="11" Width="113" TextAlignment="Center"/>
+                </Border>
+            </Expander.Header>
+            <Grid>
+                <TextBox Name="CWisim" HorizontalAlignment="Left" Margin="10,4,0,0" Text="İsim" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
+                <TextBox Name="CWsoyisim" HorizontalAlignment="Left" Margin="10,26,0,0" Text="Soyisim" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
+                <TextBox Name="CWsehir" HorizontalAlignment="Left" Margin="98,26,0,0" Text="Şehir" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <TextBox Name="CWyas" HorizontalAlignment="Left" Margin="98,4,0,0" Text="Yaş" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <TextBox Name="CWtelefon" HorizontalAlignment="Left" Margin="10,49,0,0" Text="Telefon" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <CheckBox Name="CWehliyet" Margin="188,4,116,55" Content="Ehliyet" Opacity="0.645" />
+                <CheckBox Name="CWsabika" Margin="188,26,116,33" Content="Sabıka" Opacity="0.645" />
+
+                <DatePicker Name="CWdate" Margin="259,2,187,10"/>
+                <Button Name="CWekle" Content="Ekle" Margin="413,3,106,55" Background="#FF8ACE4B" Click="CWekle_Click"></Button>
+                <Button Name="CWsil" Content="Sil" Margin="413,48,106,10" Background="#FFC42525" Click="CMsil_Click"/>
+                <Button Name="CWguncelleexpand" Content="Güncelle" Margin="413,25,106,33" Background="#FF25BDD9" Click="CWguncelleexpand_Click"/>
+            </Grid>
+        </Expander>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,62 @@
+﻿<Window x:Class="MertKaymaz_301Project.Araclar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MertKaymaz_301Project"
+        mc:Ignorable="d"
+        Title="ALA KURUMSAL - Araçlar" Height="450" Width="883" Loaded="VehiclesWindow_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blueblue.jpg" />
+        </Grid.Background>
+        <Button Content="Ana Menü" HorizontalAlignment="Left" 
+                Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
+                Width="70" Click="AnaMenu_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+                FontWeight="Black" FontSize="11" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
+        <StackPanel Visibility="Collapsed" Name="sparaclar" Margin="0,10,0,380" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.262"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.495"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBlock Height="40"><Run Text="deneme"/></TextBlock>
+        </StackPanel>
+        <DataGrid CanUserAddRows="True" Name="dgVehicles" SelectedCellsChanged="dgVehicles_SelectedCellsChanged" Margin="10,75,10,41" Opacity="0.60" />
+
+        <Expander IsExpanded="False" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Left" Height="78" Margin="94,2,0,0" VerticalAlignment="Top" Width="716" ExpandDirection="Right" Cursor="Pen" Visibility="Visible">
+            <Expander.Header >
+                <Border Background="#FFD58C6B" BorderThickness="2" BorderBrush="#FF84AEE8" Height="27">
+                    <TextBlock Foreground="Black" Text="Ekle/Güncelle/Sil" FontWeight="Black" VerticalAlignment="Center" FontSize="11" Width="113" TextAlignment="Center"/>
+                </Border>
+            </Expander.Header>
+            <Grid>
+                <TextBox Name="VWmodel" HorizontalAlignment="Left" Margin="10,4,0,0" Text="Model" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
+                <TextBox Name="VWbrand" HorizontalAlignment="Left" Margin="10,26,0,0" Text="Marka" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
+                <TextBox Name="VWcolor" HorizontalAlignment="Left" Margin="98,26,0,0" Text="Renk" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <TextBox Name="VWyear" HorizontalAlignment="Left" Margin="98,4,0,0" Text="Yıl" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <TextBox Name="VWcountry" HorizontalAlignment="Left" Margin="10,49,0,0" Text="Ülke" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
+                <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Name" Name="VWowner" HorizontalAlignment="Left" Margin="98,49,0,0" Text="Sahibi" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="17">
+
+                </ComboBox>
+
+                <CheckBox Name="VWavailable" Margin="188,4,116,55" Content="Müsait" Opacity="0.645" />
+                <CheckBox Name="VWpreowned" Margin="188,26,116,33" Content="İkinci El" Opacity="0.645" />
+                <CheckBox Name="VWsold" Margin="188,48,116,11" Content="Satıldı" Opacity="0.645" />
+                <CheckBox Name="VWcrashed" Margin="279,4,25,55" Content="Kazalı" Opacity="0.645" />
+                <CheckBox Name="VWrentable" Margin="278,26,247,33" Content="Kiralık" Opacity="0.645" />
+                <CheckBox Name="VWsale" Margin="278,48,25,11" Content="Satılık" Opacity="0.645" />
+                <DatePicker Name="VWdate" Margin="365,0,81,11"/>
+                <Button Name="VWekle" Content="Ekle" Margin="519,3,0,55" Background="#FF8ACE4B" Click="VMekle"></Button>
+                <Button Name="VMsil" Content="Sil" Margin="519,48,0,10" Background="#FFC42525" Click="VWsil"/>
+                <Button Name="VWguncelleexpand" Content="Güncelle" Margin="519,25,0,33" Background="#FF25BDD9" Click="VWguncelle"/>
+            </Grid>
+        </Expander>
+
+
+
+    </Grid>
+</Window>
