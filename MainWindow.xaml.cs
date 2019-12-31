@@ -66,5 +66,12 @@ namespace MertKaymaz_301Project
             customers.Show();
             this.Close();
         }
+
+        private void Kiralamalar_Click(object sender, RoutedEventArgs e)
+        {
+            BookingWindow booking = new BookingWindow(loginUser);
+            booking.Show();
+            this.Close();
         }
+    }
     }

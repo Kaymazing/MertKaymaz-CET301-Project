@@ -4,14 +4,16 @@ using MertKaymaz_301Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MertKaymaz_301Project.Migrations
 {
     [DbContext(typeof(AlaKurumsalDatabase))]
-    partial class AlaKurumsalDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20191231105831_bookingclassupdated")]
+    partial class bookingclassupdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,9 +30,6 @@ namespace MertKaymaz_301Project.Migrations
 
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
-
-                    b.Property<string>("CustomerName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DropPoint")
                         .HasColumnType("nvarchar(max)");
@@ -52,9 +51,6 @@ namespace MertKaymaz_301Project.Migrations
 
                     b.Property<int?>("VehicleId")
                         .HasColumnType("int");
-
-                    b.Property<string>("VehicleModel")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

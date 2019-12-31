@@ -35,7 +35,7 @@
                Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\seat-belt.png" RenderTransformOrigin="-3.067,0.299"/>
         <Button Content="Kiralamalar" HorizontalAlignment="Center" 
             Margin="0,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="36" 
-            Width="152" Click="Musteriler_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+            Width="152" Click="Kiralamalar_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
             FontWeight="Black" BorderBrush="#FF98B5ED" FontSize="14" BorderThickness="1.5"/>
         <Image HorizontalAlignment="Left" Height="24" Margin="105,165,0,0" VerticalAlignment="Top" Width="26" 
                Source="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\price.png" RenderTransformOrigin="-3.067,0.299"/>

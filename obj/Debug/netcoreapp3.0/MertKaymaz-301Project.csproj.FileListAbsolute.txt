@@ -1,5 +1,4 @@
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\bin\Debug\netcoreapp3.0\MertKaymaz-301Project.exe
-C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\MertKaymaz-301Project.csprojAssemblyReference.cache
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\MainWindow.g.cs
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\App.g.cs
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\MertKaymaz-301Project_MarkupCompile.cache

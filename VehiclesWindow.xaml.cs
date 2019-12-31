@@ -44,7 +44,6 @@ namespace MertKaymaz_301Project
                 VWcountry.Text = vehicle.Country;
                 VWowner.Text = vehicle.Owner;
                 VWyear.Text = vehicle.Year.ToString();
-                VWdate.SelectedDate = vehicle.AvailableDate;
                 VWavailable.IsChecked = vehicle.IsAvailable;
                 VWcrashed.IsChecked = vehicle.IsCrashed;
                 VWsold.IsChecked = vehicle.IsSold;
@@ -89,7 +88,7 @@ namespace MertKaymaz_301Project
             vehicle.BrandName = VWbrand.Text;
             vehicle.Color = VWcolor.Text;
             vehicle.Country = VWcountry.Text;
-            vehicle.Owner = VWowner.Text;
+            vehicle.Ownert.Name = VWowner.Text;
             vehicle.Year = int.Parse(VWyear.Text);
             vehicle.IsAvailable = VWavailable.IsChecked;
             vehicle.IsCrashed = VWcrashed.IsChecked;
@@ -155,7 +154,7 @@ namespace MertKaymaz_301Project
                 vehiclenew.BrandName = VWbrand.Text;
                 vehiclenew.Color = VWcolor.Text;
                 vehiclenew.Country = VWcountry.Text;
-                vehiclenew.Owner = VWowner.Text;
+                vehiclenew.Ownert.Name = VWowner.Text;
                 vehiclenew.Year = int.Parse(VWyear.Text);
                 vehiclenew.IsAvailable = VWavailable.IsChecked;
                 vehiclenew.IsCrashed = VWcrashed.IsChecked;

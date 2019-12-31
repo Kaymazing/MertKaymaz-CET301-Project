@@ -5,8 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="ALA KURUMSAL - Kiralamalar" Height="450" Width="800">
+        Title="ALA KURUMSAL - Kiralamalar" Height="450" Width="716" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="337*"/>
+            <ColumnDefinition Width="463*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blueblue.jpg" />
+        </Grid.Background>
+        <Button Content="Ana Menü" HorizontalAlignment="Left" 
+                Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
+                Width="70" Click="AnaMenu_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
+                FontWeight="Black" FontSize="11" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
+        <StackPanel Visibility="Collapsed" Name="sparaclar" Margin="0,10,0,380" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Grid.ColumnSpan="2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.262"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.495"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBlock Height="40"><Run Text="deneme"/></TextBlock>
+        </StackPanel>
+        <DataGrid Name="dgBooking" SelectedCellsChanged="dgBooking_SelectedCellsChanged" Margin="22,80,22,36" Opacity="0.60" Grid.ColumnSpan="2" />
+
+        <Expander IsExpanded="False" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Left" Height="78" Margin="94,2,0,0" VerticalAlignment="Top" Width="716" ExpandDirection="Right" Cursor="Pen" Visibility="Visible" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Expander.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.04"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.249"/>
+                </TransformGroup>
+            </Expander.RenderTransform>
+            <Expander.Header >
+                <Border Background="#FFD58C6B" BorderThickness="2" BorderBrush="#FF84AEE8" Height="27">
+                    <TextBlock Foreground="Black" Text="Ekle/Güncelle/Sil" FontWeight="Black" VerticalAlignment="Center" FontSize="11" Width="113" TextAlignment="Center"/>
+                </Border>
+            </Expander.Header>
+            <Grid>
+
+                <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Name" Name="BWcustomer" HorizontalAlignment="Left" Margin="10,14,0,0" Text="Müşteri" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="20"/>
+                <ComboBox ItemsSource="{Binding}" DisplayMemberPath="ModelName" Name="BWvehicle" HorizontalAlignment="Left" Margin="10,47,0,0" Text="Araç" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="19"/>
+                <ComboBox ItemsSource="{Binding}" SelectedValuePath="Id" SelectedValue="{Binding SelectedId}" Name="BWhire" HorizontalAlignment="Left" Margin="90,14,0,0" Text="Alış Yeri" VerticalAlignment="Top" Width="93" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="20">
+                    <ComboBoxItem>İstanbul</ComboBoxItem>
+                    <ComboBoxItem>İzmir</ComboBoxItem>
+                    <ComboBoxItem>Ankara</ComboBoxItem>
+                </ComboBox>
+                <ComboBox ItemsSource="{Binding MyList}" SelectedValuePath="Id" SelectedValue="{Binding SelectedId}" Name="BWdrop" HorizontalAlignment="Left" Margin="91,46,0,0" Text="Bırakma Yeri" VerticalAlignment="Top" Width="92" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="20">
+                    <ComboBoxItem>İstanbul</ComboBoxItem>
+                    <ComboBoxItem>İzmir</ComboBoxItem>
+                    <ComboBoxItem>Ankara</ComboBoxItem>
+                </ComboBox>
+
+                <CheckBox Name="BWsold" Margin="303,16,198,44" Content="Satıldı mı?" Opacity="0.645" />
+
+                <Button Name="BWeklee" Content="Ekle" Margin="396,7,123,51" Background="#FF8ACE4B" Click="BWekle"></Button>
+                <Button Name="BWsill" Content="Sil" Margin="396,52,123,6" Background="#FFC42525" Click="BWsil"/>
+                <Button Name="BWguncellee" Content="Güncelle" Margin="396,29,123,29" Background="#FF25BDD9" Click="BWguncelle"/>
+                <DatePicker Name="BWbaslangic" HorizontalAlignment="Left" Margin="196,14,0,0" VerticalAlignment="Top" Text="Kiralama Tarihi" RenderTransformOrigin="0.481,2.356" Height="20"/>
+                <DatePicker Name="BWbitis" HorizontalAlignment="Left" Margin="196,46,0,0" VerticalAlignment="Top" Text="Kiralama Tarihi" RenderTransformOrigin="0.481,2.356" Height="20"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="10,3,0,0" Text="Müşteri" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="10,35,0,0" Text="Araç" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="91,3,0,0" Text="Teslim Alma" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="91,35,0,0" Text="Teslim Etme" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="196,3,0,0" Text="Başlangıç" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="196,35,0,0" Text="Bitiş" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            </Grid>
+        </Expander>
+
+
+
     </Grid>
 </Window>
