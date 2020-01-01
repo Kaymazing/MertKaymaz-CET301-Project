@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="ALA KURUMSAL - Araçlar" Height="450" Width="872" Loaded="VehiclesWindow_Loaded">
+        Title="ALA KURUMSAL - Araçlar" Height="450" Width="872" Loaded="VehiclesWindow_Loaded" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blueblue.jpg" />

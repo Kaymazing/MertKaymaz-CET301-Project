@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MertKaymaz_301Project.Data;
 using MertKaymaz_301Project.Service;
+using Microsoft.EntityFrameworkCore;
 
 namespace MertKaymaz_301Project
 {
@@ -50,6 +51,7 @@ namespace MertKaymaz_301Project
                 VWrentable.IsChecked = vehicle.IsRentable;
                 VWpreowned.IsChecked = vehicle.IsPreOwned;
                 VWsale.IsChecked = vehicle.IsOnSale;
+                VWdate.SelectedDate = vehicle.AvailableDate;
             }
         }
 
@@ -88,7 +90,7 @@ namespace MertKaymaz_301Project
             vehicle.BrandName = VWbrand.Text;
             vehicle.Color = VWcolor.Text;
             vehicle.Country = VWcountry.Text;
-            vehicle.Ownert.Name = VWowner.Text;
+            vehicle.Owner= VWowner.Text;
             vehicle.Year = int.Parse(VWyear.Text);
             vehicle.IsAvailable = VWavailable.IsChecked;
             vehicle.IsCrashed = VWcrashed.IsChecked;
@@ -154,7 +156,7 @@ namespace MertKaymaz_301Project
                 vehiclenew.BrandName = VWbrand.Text;
                 vehiclenew.Color = VWcolor.Text;
                 vehiclenew.Country = VWcountry.Text;
-                vehiclenew.Ownert.Name = VWowner.Text;
+                vehiclenew.Owner = VWowner.Text;
                 vehiclenew.Year = int.Parse(VWyear.Text);
                 vehiclenew.IsAvailable = VWavailable.IsChecked;
                 vehiclenew.IsCrashed = VWcrashed.IsChecked;

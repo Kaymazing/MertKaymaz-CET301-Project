@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\App.xaml
-6982323544
+71047732982
 
-32-1412344108
+43-1763073007
 210663246009
-BookingWindow.xaml;CustomersWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PasswordChange.xaml;VehiclesWindow.xaml;
+BookingWindow.xaml;CustomersWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PasswordChange.xaml;PaymentWindow.xaml;VehiclesWindow.xaml;
 
-True
+False
 

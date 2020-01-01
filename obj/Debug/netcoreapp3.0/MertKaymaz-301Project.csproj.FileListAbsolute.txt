@@ -57,3 +57,6 @@ C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\V
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\BookingWindow.baml
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\CustomersWindow.baml
 C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\VehiclesWindow.baml
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\MertKaymaz-301Project.csprojAssemblyReference.cache
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\PaymentWindow.g.cs
+C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\obj\Debug\netcoreapp3.0\PaymentWindow.baml

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
 
 namespace MertKaymaz_301Project
 {
@@ -42,6 +43,7 @@ namespace MertKaymaz_301Project
                 customernew.City = CWsehir.Text;
                 customernew.HasLicence = CWehliyet.IsChecked;
                 customernew.HasCriminalRecord = CWsabika.IsChecked;
+                customernew.LicenceEndDate = CWdate.SelectedDate.Value;
 
                 alaKurumsalDatabase.SaveChanges();
                 LoadCustomers();
@@ -81,6 +83,7 @@ namespace MertKaymaz_301Project
             customer.City = CWsehir.Text;
             customer.HasLicence = CWehliyet.IsChecked;
             customer.HasCriminalRecord = CWsabika.IsChecked;
+            customer.LicenceEndDate = CWdate.SelectedDate.Value;
 
 
 
@@ -96,6 +99,8 @@ namespace MertKaymaz_301Project
             CWsehir.Text = "Şehir";
             CWehliyet.IsChecked = false;
             CWsabika.IsChecked = false;
+            CWdate.SelectedDate = DateTime.Today;
+
            
 
             LoadCustomers();
@@ -138,6 +143,7 @@ namespace MertKaymaz_301Project
                 CWsehir.Text = customer.City;
                 CWehliyet.IsChecked = customer.HasLicence;
                 CWsabika.IsChecked = customer.HasCriminalRecord;
+                CWdate.SelectedDate = customer.LicenceEndDate;
             }
         }
     }

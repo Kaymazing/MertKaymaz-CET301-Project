@@ -1,11 +1,11 @@
-﻿<Window x:Class="MertKaymaz_301Project.Customers"
+﻿<Window x:Class="MertKaymaz_301Project.PaymentWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="ALA KURUMSAL - Müşteriler" Height="450" Width="716" Loaded="CWwindowLoaded" ResizeMode="NoResize">
+        Title="ALA KURUMSAL - Ödemeler" Height="450" Width="533" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="755*"/>
@@ -30,7 +30,7 @@
             </StackPanel.RenderTransform>
             <TextBlock Height="40"><Run Text="deneme"/></TextBlock>
         </StackPanel>
-        <DataGrid CanUserAddRows="True" Name="dgCustomers" SelectedCellsChanged="dgCustomers_SelectedCellsChanged_1" Margin="10,75,10,41" Opacity="0.60" Grid.ColumnSpan="3" />
+        <DataGrid CanUserAddRows="True" Name="dgPayment" SelectedCellsChanged="dgPayment_SelectedCellsChanged" Margin="55,85,25,31" Opacity="0.60" />
 
         <Expander IsExpanded="False" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Left" Height="78" Margin="94,2,0,0" VerticalAlignment="Top" Width="716" ExpandDirection="Right" Cursor="Pen" Visibility="Visible" Grid.ColumnSpan="3">
             <Expander.Header >
@@ -39,18 +39,21 @@
                 </Border>
             </Expander.Header>
             <Grid>
-                <TextBox Name="CWisim" HorizontalAlignment="Left" Margin="10,4,0,0" Text="İsim" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
-                <TextBox Name="CWsoyisim" HorizontalAlignment="Left" Margin="10,26,0,0" Text="Soyisim" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Opacity="0.65"/>
-                <TextBox Name="CWsehir" HorizontalAlignment="Left" Margin="98,26,0,0" Text="Şehir" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
-                <TextBox Name="CWyas" HorizontalAlignment="Left" Margin="98,4,0,0" Text="Yaş" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
-                <TextBox Name="CWtelefon" HorizontalAlignment="Left" Margin="10,49,0,0" Text="Telefon" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.46,1.867" Opacity="0.65"/>
-                <CheckBox Name="CWehliyet" Margin="188,4,116,55" Content="Ehliyet" Opacity="0.645" />
-                <CheckBox Name="CWsabika" Margin="188,26,116,33" Content="Sabıka" Opacity="0.645" />
+                <TextBox Name="PWtaksitsayi" HorizontalAlignment="Left" Margin="112,48,0,0" Text="Taksit Sayısı" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Opacity="0.65" Height="18"/>
+                <ComboBox ItemsSource="{Binding MyList}" SelectedValuePath="Id" SelectedValue="{Binding SelectedId}" Name="PWmethod" HorizontalAlignment="Left" Margin="112,25,0,0" Text="Bırakma Yeri" VerticalAlignment="Top" Width="86" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="18">
+                    <ComboBoxItem>Peşin</ComboBoxItem>
+                    <ComboBoxItem>Kredi Kartı</ComboBoxItem>
 
-                <DatePicker Name="CWdate" Margin="259,2,187,10"/>
-                <Button Name="CWekle" Content="Ekle" Margin="413,3,106,55" Background="#FF8ACE4B" Click="CWekle_Click"></Button>
-                <Button Name="CWsil" Content="Sil" Margin="413,48,106,10" Background="#FFC42525" Click="CMsil_Click"/>
-                <Button Name="CWguncelleexpand" Content="Güncelle" Margin="413,25,106,33" Background="#FF25BDD9" Click="CWguncelleexpand_Click"/>
+                </ComboBox>
+                <CheckBox Name="PWtaksit" Margin="112,6,192,54" Content="Taksitli mi?" Opacity="0.645" />
+
+                <Button Name="CWekle" Content="Ekle" Margin="220,3,299,55" Background="#FF8ACE4B" Click="CWekle_Click"></Button>
+                <Button Name="CWsil" Content="Sil" Margin="220,48,299,10" Background="#FFC42525" Click="CMsil_Click"/>
+                <Button Name="CWguncelleexpand" Content="Güncelle" Margin="220,25,299,33" Background="#FF25BDD9" Click="CWguncelleexpand_Click"/>
+                <ComboBox Name="PWbooking" ItemsSource="{Binding}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="-1.46,1.867" Opacity="0.65" Height="18">
+
+
+                </ComboBox>
             </Grid>
         </Expander>
 

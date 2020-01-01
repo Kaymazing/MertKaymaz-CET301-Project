@@ -20,6 +20,7 @@ namespace MertKaymaz_301Project
     /// </summary>
     public partial class BookingWindow : Window
     {
+        
         private Owner loginUser;
         AlaKurumsalDatabase alaKurumsalDatabase = new AlaKurumsalDatabase();
         public BookingWindow(Owner owner)
@@ -28,7 +29,7 @@ namespace MertKaymaz_301Project
             InitializeComponent();
             var customers = alaKurumsalDatabase.Customers.OrderBy(d => d.Name).ToList();
             BWcustomer.ItemsSource = customers;
-            var vehicles = alaKurumsalDatabase.Vehicles.OrderBy(d => d.ModelName).ToList();
+            var vehicles = alaKurumsalDatabase.Vehicles.Where(d => d.IsAvailable==true).OrderBy(d => d.ModelName).ToList();
             BWvehicle.ItemsSource = vehicles;
         }
 
@@ -68,9 +69,11 @@ namespace MertKaymaz_301Project
             booking.EndDate = BWbitis.SelectedDate.Value;
             booking.IsSold = BWsold.IsChecked;
 
-
+            
+           
 
             alaKurumsalDatabase.Bookings.Add(booking);
+            
 
             alaKurumsalDatabase.SaveChanges();
             MessageBox.Show("Kiralama Kaydedildi.");
@@ -120,6 +123,18 @@ namespace MertKaymaz_301Project
                 bookingnew.EndDate = BWbitis.SelectedDate.Value;
                 bookingnew.IsSold = BWsold.IsChecked;
 
+
+                //var vehnew = alaKurumsalDatabase.Vehicles.Find(vehicle.Id);
+               /* Vehicle vehicle = new Vehicle();
+                string tempmodel;
+                tempmodel = BWvehicle.Text;
+                var vehnew = alaKurumsalDatabase.Vehicles.Find(vehicle.Id);
+                if (vehnew.ModelName == tempmodel)
+                {
+                    vehnew.IsAvailable = false;
+                }
+                alaKurumsalDatabase.Vehicles.Update(vehicle);*/
+
                 alaKurumsalDatabase.SaveChanges();
                 LoadBookings();
                 MessageBox.Show("Güncellendi.");
@@ -142,6 +157,13 @@ namespace MertKaymaz_301Project
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadBookings();
+        }
+
+        private void OdemelerClick(object sender, RoutedEventArgs e)
+        {
+            PaymentWindow paymentWindow = new PaymentWindow(loginUser);
+            paymentWindow.Show();
+            this.Close();
         }
     }
 }

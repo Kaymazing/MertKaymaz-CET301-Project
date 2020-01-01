@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MertKaymaz_301Project"
         mc:Ignorable="d"
-        Title="ALA KURUMSAL - Kiralamalar" Height="450" Width="716" Loaded="Window_Loaded">
+        Title="ALA KURUMSAL - Kiralamalar" Height="450" Width="716" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="337*"/>
@@ -15,7 +15,7 @@
             <ImageBrush ImageSource="C:\Users\MertKaymaz\source\repos\MertKaymaz-301Project\source\blueblue.jpg" />
         </Grid.Background>
         <Button Content="Ana Menü" HorizontalAlignment="Left" 
-                Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
+                Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
                 Width="70" Click="AnaMenu_Click" Background="#FFF68C59" Opacity="0.85" FontFamily="Montserrat" 
                 FontWeight="Black" FontSize="11" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
         <StackPanel Visibility="Collapsed" Name="sparaclar" Margin="0,10,0,380" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Grid.ColumnSpan="2">
@@ -75,6 +75,10 @@
                 <TextBlock FontSize="11" HorizontalAlignment="Left" Margin="196,35,0,0" Text="Bitiş" TextWrapping="Wrap" VerticalAlignment="Top"/>
             </Grid>
         </Expander>
+        <Button Content="Ödemeler" HorizontalAlignment="Left" 
+            Margin="10,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.511,-0.428" Height="26" 
+            Width="70" Click="OdemelerClick" Background="#FF865582" Opacity="0.85" FontFamily="Montserrat" 
+            FontWeight="Black" FontSize="11" BorderThickness="1.5" BorderBrush="#FF97B4EC"/>
 
 
 

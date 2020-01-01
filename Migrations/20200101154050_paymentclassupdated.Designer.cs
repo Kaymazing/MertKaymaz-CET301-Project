@@ -4,14 +4,16 @@ using MertKaymaz_301Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MertKaymaz_301Project.Migrations
 {
     [DbContext(typeof(AlaKurumsalDatabase))]
-    partial class AlaKurumsalDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20200101154050_paymentclassupdated")]
+    partial class paymentclassupdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -169,7 +171,7 @@ namespace MertKaymaz_301Project.Migrations
                     b.Property<bool?>("HasInstallment")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("InstallmentNumber")
+                    b.Property<int>("InstallmentNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("PaymentMethod")
